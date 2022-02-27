@@ -5,6 +5,7 @@ import io.dowlath.employee.model.Employee;
 import io.dowlath.employee.repository.EmployeeRepository;
 import io.dowlath.employee.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +15,7 @@ import java.util.Optional;
  * Date   : 2/22/2022
  * Time   : 10:20 PM
  ***/
+@Service
 public class EmployeeServiceImpl implements EmployeeService {
 
     EmployeeRepository employeeRepository;

@@ -1,11 +1,12 @@
 package io.dowlath.employee.repository;
 
+import io.dowlath.employee.integration.AbstractContainerBaseTest;
 import io.dowlath.employee.model.Employee;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.util.List;
@@ -19,7 +20,8 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Time   : 10:35 PM
  ***/
 @DataJpaTest
-public class EmployeeRepositoryTests {
+@AutoConfigureTestDatabase(replace=AutoConfigureTestDatabase.Replace.NONE)
+public class EmployeeRepository_Integration_Using_Test_Container_Tests extends AbstractContainerBaseTest {
 
     @Autowired
     private EmployeeRepository employeeRepository;
